@@ -12,6 +12,7 @@ class Employee {
 	private @Id @GeneratedValue Long id;
 	private String name;
 	private String role;
+	private List<Task> ListTask;
 
 	Employee() {}
 
@@ -43,6 +44,14 @@ class Employee {
 
 	public void setRole(String role) {
 		this.role = role;
+	}
+	
+	public void setListTask(List<Task> LisTask) {
+		this.ListTask = LisTask;
+	}
+	
+	public List<Task> getListTask(){
+		return this.ListTask;
 	}
 
 	@Override
